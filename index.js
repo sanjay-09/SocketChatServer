@@ -12,7 +12,9 @@ const io = new Server(server);
 const cors=require("cors");
 const users={};
 app.use(cors({
-    origin:"*"
+    origin: ['https://your-allowed-domain.com', 'https://another-allowed-domain.com'],
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
 }));
 
 io.on("connection", (socket) => {
