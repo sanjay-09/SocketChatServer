@@ -64,6 +64,11 @@ io.on("connection", (socket) => {
       }
     })
   });
+
+app.get("/",(req,res)=>{
+    return res.send("ok");
+
+})
 server.listen(3001, async() => {
   console.log('server running at http://localhost:3001');
   await connect();
