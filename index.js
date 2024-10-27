@@ -12,7 +12,8 @@ const io = new Server(server);
 const cors=require("cors");
 const users={};
 app.use(cors({
-    origin: ['https://your-allowed-domain.com', 'https://another-allowed-domain.com'],
+    origin:"https://flatmate-gihg.onrender.com/",
+
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization'
 }));
