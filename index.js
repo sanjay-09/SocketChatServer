@@ -11,7 +11,9 @@ const server = createServer(app);
 const io = new Server(server);
 const cors=require("cors");
 const users={};
-app.use(cors());
+app.use(cors({
+    origin:"*"
+}));
 
 io.on("connection", (socket) => {
 
