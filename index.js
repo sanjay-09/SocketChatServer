@@ -9,7 +9,9 @@ const messagedb=require("./Model/Message");
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
+const cors=require("cors");
 const users={};
+app.use(cors());
 
 io.on("connection", (socket) => {
 
